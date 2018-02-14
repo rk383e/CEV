@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomerEnvironmentViewer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="CEV" Height="350" Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="customerSearchBox" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="241"/>
+        <TextBlock x:Name="customerLabel" Grid.Row="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Customers" VerticalAlignment="Top"/>
+        <ListBox x:Name="customerListBox" Grid.Row="1" Margin="10,20,10,5" VerticalAlignment="Stretch"/>
+        <TextBlock x:Name="environmentLabel" Grid.Row="2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Environment" VerticalAlignment="Top"/>
+        <ListBox x:Name="environmentListBox" Grid.Row="2" Margin="10,20,10,5" VerticalAlignment="Stretch"/>
     </Grid>
 </Window>
