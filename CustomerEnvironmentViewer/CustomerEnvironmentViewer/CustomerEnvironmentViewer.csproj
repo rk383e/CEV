@@ -74,6 +74,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Environment.cs" />
+    <Compile Include="Model\EnvironmentDetails.cs" />
     <Compile Include="ViewModel\CustomerDetailViewModel.cs" />
     <Compile Include="ViewModel\EnvironmentDetailViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
@@ -118,8 +121,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
