@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomerEnvironmentViewer.ViewModel
+namespace CustomerEnvironmentViewer.Model
 {
-    public class CustomerDetailViewModel : BaseViewModel
+    public class FtpHandler
     {
     }
 }

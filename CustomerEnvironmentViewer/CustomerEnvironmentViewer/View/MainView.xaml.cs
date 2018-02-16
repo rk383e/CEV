@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace CustomerEnvironmentViewer
+namespace CustomerEnvironmentViewer.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

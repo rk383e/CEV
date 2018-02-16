@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomerEnvironmentViewer.ViewModel
 {
-    public class LoginViewModel
+    public class LoginViewModel : BaseViewModel
     {
     }
 }
