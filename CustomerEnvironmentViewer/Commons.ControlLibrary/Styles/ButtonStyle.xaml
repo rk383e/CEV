@@ -4,6 +4,7 @@
 
     <Style TargetType="Button">
         <Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}"/>
+        <Setter Property="Foreground" Value="{StaticResource ButtonForegroundColor}"/>
         <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}"/>
     </Style>
 </ResourceDictionary>

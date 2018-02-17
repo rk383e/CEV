@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:CustomerEnvironmentViewer.View"
         xmlns:vm="clr-namespace:CustomerEnvironmentViewer.ViewModel"
         mc:Ignorable="d"
+        Background="#3f3f3f"
         Title="CEV" Height="350" Width="525">
     <Window.DataContext>
         <vm:MainViewModel/>
