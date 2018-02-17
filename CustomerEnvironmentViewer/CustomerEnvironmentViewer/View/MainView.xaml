@@ -6,8 +6,12 @@
         xmlns:local="clr-namespace:CustomerEnvironmentViewer.View"
         xmlns:vm="clr-namespace:CustomerEnvironmentViewer.ViewModel"
         mc:Ignorable="d"
-        Background="#3f3f3f"
-        Title="CEV" Height="350" Width="525">
+        Background="{StaticResource SecondaryThemeColor}"
+        Title="CEV" WindowStyle="None"
+        MaxHeight="500" MaxWidth="600" Height="500" Width="600">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" ResizeBorderThickness="5" />
+    </WindowChrome.WindowChrome>
     <Window.DataContext>
         <vm:MainViewModel/>
     </Window.DataContext>
@@ -16,5 +20,15 @@
             <local:LoginView/>
         </DataTemplate>
     </Window.Resources>
-    <ContentControl Content="{Binding ActiveViewModel}"/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="bannerGrid" Grid.Row="0" MouseLeftButtonDown="BannerCanvas_MouseLeftButtonDown" Background="{StaticResource PrimaryThemeColor}">
+            <Button x:Name="exitBtn" Click="exitBtn_Click" HorizontalAlignment="Right" VerticalAlignment="Center" Width="50" Height="30" Content="X" FontSize="18"
+                    BorderBrush="{StaticResource ExitButtonBorderColor}" Foreground="{StaticResource ExitButtonForegroundColor}"/>
+        </Grid>
+        <ContentControl Grid.Row="1" Content="{Binding ActiveViewModel}"/>
+    </Grid>
 </Window>

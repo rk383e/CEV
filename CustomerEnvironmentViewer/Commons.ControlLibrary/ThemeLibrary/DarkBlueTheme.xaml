@@ -4,9 +4,15 @@
 
     <FontFamily x:Key="GlobalFont">Calibri</FontFamily>
 
+    <SolidColorBrush x:Key="PrimaryThemeColor" Color="#2e3245"/>
+    <SolidColorBrush x:Key="SecondaryThemeColor" Color="#3f3f3f"/>
+
     <SolidColorBrush x:Key="ButtonBackgroundColor" Color="#2e3245"/>
     <SolidColorBrush x:Key="ButtonForegroundColor" Color="LightGray"/>
     <SolidColorBrush x:Key="ButtonBorderColor" Color="LightGray"/>
-   
+
+    <SolidColorBrush x:Key="ExitButtonBorderColor" Color="#2e3245"/>
+    <SolidColorBrush x:Key="ExitButtonForegroundColor" Color="LightGray"/>
+
 
 </ResourceDictionary>
