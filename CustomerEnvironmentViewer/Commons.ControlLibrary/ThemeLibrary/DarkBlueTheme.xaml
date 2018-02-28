@@ -10,6 +10,8 @@
     <SolidColorBrush x:Key="ButtonBackgroundColor" Color="#2e3245"/>
     <SolidColorBrush x:Key="ButtonForegroundColor" Color="LightGray"/>
     <SolidColorBrush x:Key="ButtonBorderColor" Color="LightGray"/>
+    <SolidColorBrush x:Key="ButtonHoverColor" Color="#FF41465F"/>
+    <SolidColorBrush x:Key="ButtonPressedColor" Color="#FF7880A4"/>
 
     <SolidColorBrush x:Key="ExitButtonBorderColor" Color="#2e3245"/>
     <SolidColorBrush x:Key="ExitButtonForegroundColor" Color="LightGray"/>

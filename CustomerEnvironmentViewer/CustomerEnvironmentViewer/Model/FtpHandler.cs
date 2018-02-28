@@ -1,12 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FluentFTP;
 
 namespace CustomerEnvironmentViewer.Model
 {
-    public class FtpHandler
+    public static class FtpHandler
     {
+        public static FtpListItem[] GetServerDirectories(string workingDir)
+        {
+            FtpListItem[] directoryList;
+
+            try
+            {
+                using (FtpClient client = new FtpClient("ftp.sourcekor.com", "rkrysko@sourcekor.com", "Toy300zx!"))
+                {
+                    client.Connect();
+                    client.SetWorkingDirectory(workingDir);
+                    directoryList = (FtpListItem[])client.GetListing().Where(x => x.Type.Equals("Directory"));
+
+                    return directoryList;
+                }
+            }
+            catch (FtpException fe)
+            {
+                throw;
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
     }
 }
