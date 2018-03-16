@@ -15,7 +15,7 @@ namespace CustomerEnvironmentViewer.ViewModel
 
         public LoginViewModel()
         {
-            FtpHandler.GetServerData("Customers");
+            //FtpHandler.GetServerData("Customers");
         }
     }
 }
