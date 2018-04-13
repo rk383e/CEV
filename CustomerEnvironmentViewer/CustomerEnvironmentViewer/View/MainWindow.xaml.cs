@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using FluentFTP;
+using System;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace CustomerEnvironmentViewer.View
@@ -11,6 +13,8 @@ namespace CustomerEnvironmentViewer.View
         public MainWindow()
         {
             InitializeComponent();
+
+            loginView.LoginSuccessful += new EventHandler<FtpListItem[]>(OnLoginSuccessful);
         }
 
         private void BannerCanvas_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -38,9 +42,14 @@ namespace CustomerEnvironmentViewer.View
             e.Handled = true;
         }
 
-        private void exitBtn_Click(object sender, RoutedEventArgs e)
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void OnLoginSuccessful(object sender, FtpListItem[] directoryCollection)
+        {
+
         }
     }
 }

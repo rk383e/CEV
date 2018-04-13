@@ -2,7 +2,7 @@
 using System.Linq;
 using FluentFTP;
 
-namespace CustomerEnvironmentViewer.Model
+namespace CustomerEnvironmentViewer
 {
     public static class FtpHandler
     {
@@ -16,7 +16,7 @@ namespace CustomerEnvironmentViewer.Model
                 {
                     client.Connect();
                     client.SetWorkingDirectory(workingDir);
-                    directoryList = (FtpListItem[])client.GetListing().Where(x => x.Type.Equals("Directory"));
+                    directoryList = client.GetListing();
 
                     return directoryList;
                 }

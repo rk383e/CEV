@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:CustomerEnvironmentViewer"
              xmlns:cl="clr-namespace:Commons.ControlLibrary.CustomControls;assembly=Commons.ControlLibrary"
-             StartupUri="/View/MainView.xaml">
+             StartupUri="/View/MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
