@@ -104,7 +104,6 @@
     <Compile Include="Model\Environment.cs" />
     <Compile Include="Model\EnvironmentDetails.cs" />
     <Compile Include="Model\FtpHandler.cs" />
-    <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\CustomerDetailViewModel.cs" />
     <Compile Include="ViewModel\EnvironmentDetailViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
