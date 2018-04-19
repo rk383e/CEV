@@ -1,20 +1,16 @@
 ﻿using FluentFTP;
 using System;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace CustomerEnvironmentViewer.View
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-
-            loginView.LoginSuccessful += new EventHandler<FtpListItem[]>(OnLoginSuccessful);
         }
 
         private void BannerCanvas_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)

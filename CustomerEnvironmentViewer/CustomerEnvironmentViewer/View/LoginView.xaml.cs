@@ -17,13 +17,7 @@ namespace CustomerEnvironmentViewer.View
         private void FtpLoginBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             FtpListItem[] items = FtpHandler.GetServerDirectories("Customers");
-            OnLoginSuccessful(items);
-        }
-        
-        protected virtual void OnLoginSuccessful(FtpListItem[] directories)
-        {
-            EventHandler<FtpListItem[]> loginEvent = LoginSuccessful;
-            loginEvent(true, directories);
+            LoginSuccessful(null, items);
         }
     }
 }

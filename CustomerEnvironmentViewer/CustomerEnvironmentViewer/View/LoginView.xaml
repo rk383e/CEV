@@ -8,6 +8,6 @@
              Background="#3f3f3f"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Button x:Name="ftpLoginBtn" Content="Login To FTP"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Click="FtpLoginBtn_Click"/>
+        <Button x:Name="ftpLoginBtn" Content="Login To FTP"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Click="FtpLoginBtn_Click" />
     </Grid>
 </UserControl>

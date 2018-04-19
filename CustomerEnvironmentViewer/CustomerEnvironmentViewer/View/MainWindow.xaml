@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomerEnvironmentViewer.View"
         mc:Ignorable="d"
-        Background="{StaticResource SecondaryThemeColor}"
+        Background="{StaticResource SecondaryThemeColor}"        
         Title="CEV" WindowStyle="None"
         MaxHeight="500" MaxWidth="600" Height="500" Width="600">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="0" ResizeBorderThickness="5" />
     </WindowChrome.WindowChrome>
-    <Grid>
+    <Grid x:Name="mainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition/>
@@ -20,6 +20,6 @@
             <Button x:Name="exitBtn" Click="ExitBtn_Click" HorizontalAlignment="Right" VerticalAlignment="Center" Width="50" Height="30" Content="X" FontSize="18"
                     BorderBrush="{StaticResource ExitButtonBorderColor}" Foreground="{StaticResource ExitButtonForegroundColor}"/>
         </Grid>
-        <local:LoginView x:Name="loginView" Grid.Row="1"/>
+        <local:LoginView x:Name="loginView" Grid.Row="1" LoginSuccessful="OnLoginSuccessful"/>
     </Grid>
 </Window>
