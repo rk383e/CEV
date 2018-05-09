@@ -12,7 +12,7 @@ namespace CustomerEnvironmentViewer
 
             try
             {
-                using (FtpClient client = new FtpClient("ftp.sourcekor.com", "rkrysko@sourcekor.com", "Toy300zx!"))
+                using (FtpClient client = new FtpClient("supsrv4", "rostik", "rostik"))
                 {
                     client.Connect();
                     client.SetWorkingDirectory(workingDir);
@@ -21,7 +21,7 @@ namespace CustomerEnvironmentViewer
                     return directoryList;
                 }
             }
-            catch (FtpException fe)
+            catch (FtpException fe) 
             {
                 throw;
             }

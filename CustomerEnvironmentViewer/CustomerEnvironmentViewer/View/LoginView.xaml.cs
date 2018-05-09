@@ -16,7 +16,7 @@ namespace CustomerEnvironmentViewer.View
 
         private void FtpLoginBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            FtpListItem[] items = FtpHandler.GetServerDirectories("Customers");
+            FtpListItem[] items = FtpHandler.GetServerDirectories("/home/rostik/CEV/Customers");
             LoginSuccessful(null, items);
         }
     }

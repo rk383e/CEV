@@ -11,6 +11,10 @@ namespace CustomerEnvironmentViewer.View
         public MainWindow()
         {
             InitializeComponent();
+            LoginView loginView = new LoginView();
+            loginView.LoginSuccessful += OnLoginSuccessful;
+            mainContent.Content = loginView;
+
         }
 
         private void BannerCanvas_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -45,7 +49,7 @@ namespace CustomerEnvironmentViewer.View
 
         private void OnLoginSuccessful(object sender, FtpListItem[] directoryCollection)
         {
-
+            mainContent.Content = new CustomerDetailView();
         }
     }
 }
