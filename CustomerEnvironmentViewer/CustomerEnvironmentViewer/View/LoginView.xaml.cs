@@ -1,5 +1,6 @@
 ﻿using FluentFTP;
 using System;
+using System.Collections.Generic;
 using System.Windows.Controls;
 
 namespace CustomerEnvironmentViewer.View
@@ -7,7 +8,7 @@ namespace CustomerEnvironmentViewer.View
 
     public partial class LoginView : UserControl
     {
-        public event EventHandler<FtpListItem[]> LoginSuccessful;
+        public event EventHandler<List<string>> LoginSuccessful;
 
         public LoginView()
         {
@@ -16,7 +17,7 @@ namespace CustomerEnvironmentViewer.View
 
         private void FtpLoginBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            FtpListItem[] items = FtpHandler.GetServerDirectories("/home/rostik/CEV/Customers");
+            List<string> items = FtpHandler.GetServerDirectories("Customers");
             LoginSuccessful(null, items);
         }
     }

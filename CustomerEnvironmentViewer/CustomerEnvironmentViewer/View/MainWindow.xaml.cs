@@ -1,5 +1,6 @@
 ﻿using FluentFTP;
 using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
@@ -47,9 +48,9 @@ namespace CustomerEnvironmentViewer.View
             this.Close();
         }
 
-        private void OnLoginSuccessful(object sender, FtpListItem[] directoryCollection)
+        private void OnLoginSuccessful(object sender, List<string> directoryCollection)
         {
-            mainContent.Content = new CustomerDetailView();
+            mainContent.Content = new CustomerDetailView(directoryCollection);
         }
     }
 }

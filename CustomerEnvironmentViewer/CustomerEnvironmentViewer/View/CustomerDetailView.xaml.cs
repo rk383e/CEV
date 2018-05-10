@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentFTP;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,22 @@ namespace CustomerEnvironmentViewer.View
     /// </summary>
     public partial class CustomerDetailView : UserControl
     {
-        public CustomerDetailView()
+        private List<string> _dirList;
+        private List<string> _subDirList;
+
+        public CustomerDetailView(List<string> context)
         {
             InitializeComponent();
+            _dirList = context;
+            customerListBox.ItemsSource = _dirList;
+        }
+
+        private void CustomerListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            object selectedCustomer = e.AddedItems[0];
+            string subDirectory = string.Format("Customers/{0}", selectedCustomer.ToString());
+            _subDirList = FtpHandler.GetServerDirectories(subDirectory);
+            environmentListBox.ItemsSource = _subDirList;
         }
     }
 }
