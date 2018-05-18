@@ -4,7 +4,7 @@
     <FontFamily x:Key="GlobalFont">Calibri</FontFamily>
 
     <SolidColorBrush x:Key="PrimaryThemeColor" Color="#2e3245"/>
-    <SolidColorBrush x:Key="SecondaryThemeColor" Color="#3f3f3f"/>
+    <SolidColorBrush x:Key="SecondaryThemeColor" Color="#FFC3C1C1"/>
 
     <SolidColorBrush x:Key="ButtonBackgroundColor" Color="#2e3245"/>
     <SolidColorBrush x:Key="ButtonForegroundColor" Color="LightGray"/>

@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomerEnvironmentViewer.View"
+        xmlns:cl="clr-namespace:Commons.ControlLibrary;assembly=Commons.ControlLibrary"
         mc:Ignorable="d"
         Background="{StaticResource SecondaryThemeColor}"        
         Title="CEV" WindowStyle="None"
@@ -22,5 +23,6 @@
         </Grid>
         <!--<local:LoginView x:Name="loginView" Grid.Row="1" LoginSuccessful="OnLoginSuccessful"/>-->
         <Frame x:Name="mainContent" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+        <cl:LoadingGrid x:Name="loadingGrid"/>
     </Grid>
 </Window>
