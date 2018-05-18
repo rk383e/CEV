@@ -23,6 +23,6 @@
         </Grid>
         <!--<local:LoginView x:Name="loginView" Grid.Row="1" LoginSuccessful="OnLoginSuccessful"/>-->
         <Frame x:Name="mainContent" Grid.Row="1" NavigationUIVisibility="Hidden"/>
-        <cl:LoadingGrid x:Name="loadingGrid"/>
+        <cl:LoadingGrid x:Name="loadingGrid" Grid.Row="1"/>
     </Grid>
 </Window>

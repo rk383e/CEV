@@ -7,14 +7,22 @@ namespace Commons.ControlLibrary
     /// Interaction logic for LoadingControl.xaml
     /// </summary>
     public partial class LoadingGrid : UserControl
-    {
-        public static readonly DependencyProperty ActiveSpinProperty = DependencyProperty.Register("ActiveSpin", typeof(bool), typeof(LoadingGrid), new PropertyMetadata(null));
-
-        public bool ActiveSpin { get; set; }
-
+    {        
         public LoadingGrid()
         {
             InitializeComponent();
+        }
+
+        public void Start()
+        {
+            this.Visibility = Visibility.Visible;
+            loadingIcon.Spin = true;
+        }
+
+        public void Stop()
+        {
+            loadingIcon.Spin = false;
+            this.Visibility = Visibility.Collapsed;
         }
     }
 }

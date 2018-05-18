@@ -98,12 +98,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Helpers\WorkerThread.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\CustomerFactory.cs" />
     <Compile Include="Model\Environment.cs" />
     <Compile Include="Model\EnvironmentDetails.cs" />
     <Compile Include="Model\FtpHandler.cs" />
-    <Compile Include="Helpers\AsyncTaskWatcher.cs" />
     <Compile Include="View\CustomerDetailView.xaml.cs">
       <DependentUpon>CustomerDetailView.xaml</DependentUpon>
     </Compile>

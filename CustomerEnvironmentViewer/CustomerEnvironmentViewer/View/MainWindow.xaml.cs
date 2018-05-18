@@ -1,7 +1,10 @@
-﻿using FluentFTP;
+﻿using CustomerEnvironmentViewer.Helpers;
+using FluentFTP;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
@@ -10,6 +13,7 @@ namespace CustomerEnvironmentViewer.View
 {
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -48,9 +52,19 @@ namespace CustomerEnvironmentViewer.View
 
         private void LoginInitialize()
         {
-            loadingGrid.ActiveSpin = true;
-            List<string> items = FtpHandler.GetServerDirectories("Customers");
-            loadingGrid.ActiveSpin = false;
+            loadingGrid.Start();
+            new WorkerThread(Login_DoWork, Login_Completed, null);
+        }
+
+        private void Login_DoWork(object sender, DoWorkEventArgs e)
+        {
+            e.Result = FtpHandler.GetServerDirectories("Customers");
+        }
+
+        private void Login_Completed(object sender, RunWorkerCompletedEventArgs e)
+        {
+            loadingGrid.Stop();
+            List<string> items = (List<string>)e.Result;                      
             mainContent.Content = new CustomerDetailView(items);
         }
     }

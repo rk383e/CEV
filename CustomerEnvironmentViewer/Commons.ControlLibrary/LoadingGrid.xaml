@@ -10,6 +10,6 @@
              x:Name="LoadingGridUC">
     <Grid x:Name="wrapper" >
         <Grid x:Name="maskGrid" Background="DimGray" Opacity="0.8"/>
-        <fa:ImageAwesome Icon="CircleOutlineNotch" Foreground="{StaticResource PrimaryThemeColor}" Spin="{Binding ActiveSpin, ElementName=LoadingGridUC, UpdateSourceTrigger=PropertyChanged}" SpinDuration="3" Height="100" Width="100" Opacity="1"/>
+        <fa:ImageAwesome x:Name="loadingIcon" Icon="CircleOutlineNotch" Foreground="{StaticResource PrimaryThemeColor}" Spin="{Binding ActiveSpin, ElementName=LoadingGridUC, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SpinDuration="3" Height="100" Width="100" Opacity="1"/>
     </Grid>
 </UserControl>
