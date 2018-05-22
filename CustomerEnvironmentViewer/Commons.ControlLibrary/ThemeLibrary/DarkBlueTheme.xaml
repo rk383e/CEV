@@ -3,17 +3,21 @@
 
     <FontFamily x:Key="GlobalFont">Calibri</FontFamily>
 
-    <SolidColorBrush x:Key="PrimaryThemeColor" Color="#2e3245"/>
-    <SolidColorBrush x:Key="SecondaryThemeColor" Color="#FFC3C1C1"/>
+    <SolidColorBrush x:Key="PrimaryThemeColor" Color="#e7e7e7"/>
+    <SolidColorBrush x:Key="SecondaryThemeColor" Color="#373737"/>
 
-    <SolidColorBrush x:Key="ButtonBackgroundColor" Color="#2e3245"/>
-    <SolidColorBrush x:Key="ButtonForegroundColor" Color="LightGray"/>
-    <SolidColorBrush x:Key="ButtonBorderColor" Color="LightGray"/>
-    <SolidColorBrush x:Key="ButtonHoverColor" Color="#FF41465F"/>
-    <SolidColorBrush x:Key="ButtonPressedColor" Color="#FF7880A4"/>
+    <SolidColorBrush x:Key="ButtonBackgroundColor" Color="#e7e7e7"/>
+    <SolidColorBrush x:Key="ButtonForegroundColor" Color="Black"/>
+    <SolidColorBrush x:Key="ButtonBorderColor" Color="White"/>
+    <SolidColorBrush x:Key="ButtonHoverColor" Color="#d4d2d2"/>
+    <SolidColorBrush x:Key="ButtonPressedColor" Color="#bbcaec"/>
 
-    <SolidColorBrush x:Key="ExitButtonBorderColor" Color="#2e3245"/>
-    <SolidColorBrush x:Key="ExitButtonForegroundColor" Color="LightGray"/>
+    <SolidColorBrush x:Key="ExitButtonBorderColor" Color="#373737"/>
+    <SolidColorBrush x:Key="ExitButtonForegroundColor" Color="White"/>
+    <SolidColorBrush x:Key="ExitButtonBackgroundColor" Color="#373737"/>
+    <SolidColorBrush x:Key="ExitButtonHoverColor" Color="#d4d2d2"/>
+
+    <SolidColorBrush x:Key="DefaultTextColor" Color="Black"/>
 
 
 </ResourceDictionary>

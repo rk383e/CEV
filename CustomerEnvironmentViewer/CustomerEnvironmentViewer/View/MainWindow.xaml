@@ -17,9 +17,9 @@
             <RowDefinition Height="30"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid x:Name="bannerGrid" Grid.Row="0" MouseLeftButtonDown="BannerCanvas_MouseLeftButtonDown" Background="{StaticResource PrimaryThemeColor}">
+        <Grid x:Name="bannerGrid" Grid.Row="0" MouseLeftButtonDown="BannerCanvas_MouseLeftButtonDown" Background="{StaticResource ExitButtonBackgroundColor}">
             <Button x:Name="exitBtn" Click="ExitBtn_Click" HorizontalAlignment="Right" VerticalAlignment="Center" Width="50" Height="30" Content="X" FontSize="18"
-                    BorderBrush="{StaticResource ExitButtonBorderColor}" Foreground="{StaticResource ExitButtonForegroundColor}"/>
+                    BorderBrush="{StaticResource ExitButtonBorderColor}" Foreground="{StaticResource ExitButtonForegroundColor}" Background="{StaticResource ExitButtonBackgroundColor}"/>
         </Grid>
         <!--<local:LoginView x:Name="loginView" Grid.Row="1" LoginSuccessful="OnLoginSuccessful"/>-->
         <Frame x:Name="mainContent" Grid.Row="1" NavigationUIVisibility="Hidden"/>
