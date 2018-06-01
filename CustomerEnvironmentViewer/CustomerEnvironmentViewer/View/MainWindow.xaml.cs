@@ -3,6 +3,7 @@ using FluentFTP;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -58,14 +59,37 @@ namespace CustomerEnvironmentViewer.View
 
         private void Login_DoWork(object sender, DoWorkEventArgs e)
         {
-            e.Result = FtpHandler.GetServerDirectories("Customers");
+            try
+            {
+                e.Result = FtpHandler.GetServerDirectories("Customers");
+            }
+            catch (SocketException se)
+            {
+                if (se.Message == "No such host is known")
+                    e.Result = new Exception("Cannot connect to the host FTP, please make sure you are connected to the company VPN");
+                else
+                    e.Result = new Exception(se.Message);
+            }
+            catch (Exception ex)
+            {
+                e.Result = ex;
+            }
         }
 
         private void Login_Completed(object sender, RunWorkerCompletedEventArgs e)
         {
             loadingGrid.Stop();
-            List<string> items = (List<string>)e.Result;                      
-            mainContent.Content = new CustomerDetailView(items);
+            if (e.Result.GetType() == typeof(List<string>))
+            {
+                List<string> items = (List<string>)e.Result;
+                mainContent.Content = new CustomerDetailView(items);
+            }
+            else if (e.Result.GetType() == typeof(Exception))
+            {
+                ErrorView errorView = new ErrorView();
+                errorView.errorBlock.Text = ((Exception)e.Result).Message;
+                mainContent.Content = errorView;
+            }            
         }
     }
 }
