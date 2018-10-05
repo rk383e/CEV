@@ -11,15 +11,21 @@
     <Grid Height="470" VerticalAlignment="Top">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="102*"/>
+            <RowDefinition Height="113*"/>
         </Grid.RowDefinitions>
         <TextBox x:Name="customerSearchBox" Grid.Row="0" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="25" Width="241" Text="Search" TextWrapping="Wrap"   Foreground="Gray"/>
-        <Button x:Name="newCustomerBtn" Grid.Row="0" Margin="0,10,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="25" Width="50" Content="New"/>
-        <TextBlock x:Name="customerLabel" Grid.Row="1" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Customers" TextWrapping="Wrap" Foreground="{StaticResource DefaultTextColor}"/>
-        <ListBox x:Name="customerListBox" Grid.Row="1" Margin="10,20,10,10" VerticalAlignment="Stretch" SelectionChanged="CustomerListBox_SelectionChanged" SelectionMode="Single"/>
-        <TextBlock x:Name="environmentLabel" Grid.Row="2" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Environment" TextWrapping="Wrap" Foreground="{StaticResource DefaultTextColor}"/>
-        <ListBox x:Name="environmentListBox" Grid.Row="2" Margin="10,20,10,10" VerticalAlignment="Stretch"/>
+        <Button x:Name="openBtn" Grid.Row="2" Margin="0,0,10,10" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="25" Width="50" Content="Open"/>
+        <TextBlock x:Name="customerLabel" Grid.Row="1" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Customers" TextWrapping="Wrap" Foreground="{StaticResource DefaultTextColor}" Height="16" Width="56"/>
+        <Button x:Name="newCustomerBtn" Grid.Row="1" Margin="0,5,20,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="21" Width="23">
+            <Image x:Name="buttonIcon" VerticalAlignment="Center" Source="C:\Users\rkrysko\Source\Repos\CEV\CustomerEnvironmentViewer\CustomerEnvironmentViewer\Resources\Plus3.png" Stretch="UniformToFill"></Image>
+        </Button>
+        <ListBox x:Name="customerListBox" Grid.Row="1" Margin="10,30,10,10" VerticalAlignment="Stretch" SelectionChanged="CustomerListBox_SelectionChanged" SelectionMode="Single"/>
+        <TextBlock x:Name="environmentLabel" Grid.Row="2" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Environment" TextWrapping="Wrap" Foreground="{StaticResource DefaultTextColor}" Height="16" Width="67"/>
+        <Button x:Name="newEnvironmentBtn" Grid.Row="2" Margin="0,5,20,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="21" Width="23">
+            <Image x:Name="buttonIcon2" VerticalAlignment="Center" Source="C:\Users\rkrysko\Source\Repos\CEV\CustomerEnvironmentViewer\CustomerEnvironmentViewer\Resources\Plus3.png" Stretch="UniformToFill" Height="15" Width="15"></Image>
+        </Button>
+        <ListBox x:Name="environmentListBox" Grid.Row="2" Margin="10,30,10,40" VerticalAlignment="Stretch"/>
         <!--<cl:LoadingGrid x:Name="loadingControl" Grid.RowSpan="4"></cl:LoadingGrid>-->
     </Grid>
 </UserControl>

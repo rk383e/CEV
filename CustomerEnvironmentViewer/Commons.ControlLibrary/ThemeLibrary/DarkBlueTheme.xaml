@@ -8,7 +8,7 @@
 
     <SolidColorBrush x:Key="ButtonBackgroundColor" Color="#e7e7e7"/>
     <SolidColorBrush x:Key="ButtonForegroundColor" Color="Black"/>
-    <SolidColorBrush x:Key="ButtonBorderColor" Color="White"/>
+    <SolidColorBrush x:Key="ButtonBorderColor" Color="Black"/>
     <SolidColorBrush x:Key="ButtonHoverColor" Color="#d4d2d2"/>
     <SolidColorBrush x:Key="ButtonPressedColor" Color="#bbcaec"/>
 
